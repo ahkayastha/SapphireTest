@@ -1,0 +1,28 @@
+<div class="list-container">
+  <h2>Providers</h2>
+
+<table border="1px" width="100%">
+  <thead class="primary">
+    <th>UnSelected</th>
+    <th>Selected</th>
+  </thead>
+  <tbody >
+    <td>
+      <ul class="selector">
+        <li *ngFor="let p of unselectedProviders"
+          (click)="moveProvider(p,'U')">
+          <span class="badge">{{p.id}}</span> {{p.name}}
+        </li>
+      </ul>
+    </td>
+    <td>
+      <ul class="selector">
+        <li  *ngFor="let p of selectedProviders"
+          (click)="moveProvider(p,'S')">
+          <span class="badge">{{p.id}}</span> {{p.name}}
+        </li>
+      </ul>
+    </td>
+  </tbody>
+  
+</table>
